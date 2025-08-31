@@ -4,7 +4,7 @@ import React from 'react';
 const MessageList = ({ messages, currentUser }) => {
 
   const messagesEndRef=useRef(null)
-
+const myid=localStorage.getItem("myid")
 useEffect(()=>{
     if(messagesEndRef.current){
       messagesEndRef.current.scrollIntoView({behavior:'smooth'})
@@ -16,7 +16,7 @@ useEffect(()=>{
       {messages.map((msg, i) => (
         <div
           key={i}
-          className={`flex mb-2 ${msg.senderId === currentUser ? "justify-end" : "justify-start"}`}
+          className={`flex mb-2 ${msg.senderId === myid ? "justify-end" : "justify-start"}`}
         >
           <div
             className={`px-4 py-2 rounded-2xl max-w-xs ${
