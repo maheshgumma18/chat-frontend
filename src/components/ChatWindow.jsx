@@ -6,7 +6,7 @@ import axios from "axios";
 import {io} from "socket.io-client"
 
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chat-backend-y218.onrender.com:5000");
 
 socket.on("connect", () => {
   console.log("Connected:", socket.id);
@@ -26,7 +26,7 @@ const ChatWindow = ({ selectedUser }) => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.post(
-          "http://localhost:5000/api/auth/allmsg",
+          "https://chat-backend-y218.onrender.com:5000/api/auth/allmsg",
           { userid: selectedUser?._id },
           {
             headers: {
@@ -85,7 +85,7 @@ useEffect(() => {
     try {
       // Call API to store message
       const res = await axios.post(
-        "http://localhost:5000/api/auth/sendmsg",
+        "https://chat-backend-y218.onrender.com:5000/api/auth/sendmsg",
         {
           userid: selectedUser._id,
           msg: text,
