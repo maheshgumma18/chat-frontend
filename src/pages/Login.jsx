@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     console.log("Login with:", { email, password });
      try {
-    const res = await axios.post("https://chat-backend-y218.onrender.com:5000/api/auth/login", {
+    const res = await axios.post("https://chat-backend-y218.onrender.com/api/auth/login", {
       email,
       password,
     });

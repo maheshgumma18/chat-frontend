@@ -9,7 +9,7 @@ export const fetchMessages = createAsyncThunk(
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "https://chat-backend-y218.onrender.com:5000/api/auth/allmsg",
+        "https://chat-backend-y218.onrender.com/api/auth/allmsg",
         { userid: userId },
         {
           headers: {

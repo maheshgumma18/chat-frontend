@@ -13,7 +13,7 @@ const ChatPage = () => {
   const fetchFriends = async () => {
     try {
       console.log("request sent");
-      const res = await axios.get("https://chat-backend-y218.onrender.com:5000/api/auth/getfrnds", {
+      const res = await axios.get("https://chat-backend-y218.onrender.com/api/auth/getfrnds", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`, // if you use token
         },

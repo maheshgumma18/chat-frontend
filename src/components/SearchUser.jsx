@@ -16,7 +16,7 @@ export default function SearchUser() {
         const token = localStorage.getItem("token");
    
         const res = await axios.post(
-  "https://chat-backend-y218.onrender.com:5000/api/auth/addfrnd",
+  "https://chat-backend-y218.onrender.com/api/auth/addfrnd",
   { userid: id }, // ✅ send in body
   {
     headers: {
@@ -33,7 +33,7 @@ export default function SearchUser() {
     if (!query) return;
 
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/search", {
+      const res = await axios.get("http://localhost/api/auth/search", {
         params: { username: query },
       });
       setResults(res.data);

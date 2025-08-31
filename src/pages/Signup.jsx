@@ -13,7 +13,7 @@ const Signup = () => {
     console.log("Signup with:", { name, email, password });
     
     try {
-    const res = await axios.post("https://chat-backend-y218.onrender.com:5000/api/auth/register", {
+    const res = await axios.post("https://chat-backend-y218.onrender.com/api/auth/register", {
       name,
       email,
       password,
