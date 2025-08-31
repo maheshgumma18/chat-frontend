@@ -33,7 +33,7 @@ export default function SearchUser() {
     if (!query) return;
 
     try {
-      const res = await axios.get("http://localhost/api/auth/search", {
+      const res = await axios.get("https://chat-backend-y218.onrender.com/api/auth/search", {
         params: { username: query },
       });
       setResults(res.data);
