@@ -53,15 +53,11 @@ useEffect(() => {
    socket.on('onlineusers',(data)=>{
     console.log("the online users are",data)
          setOnline(data)
-   },
-     
-  )
+   })
     
     
     return () => {
       socket.off("receiveMessage");
-      socket.off("onlineusers");
-     
     };
   }, []);
 
