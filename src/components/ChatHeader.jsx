@@ -1,6 +1,6 @@
 import { EllipsisVerticalIcon } from "@heroicons/react/24/solid";
 import SearchUser from "./SearchUser";
-import Profile from "./profile";
+import Profile from "./Profile";
 const ChatHeader = ({ selectedUser,online }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b bg-white shadow h-auto">
